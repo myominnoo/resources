@@ -1,0 +1,54 @@
+---
+title: "HPV Microbiome Data Analysis"
+author: "Myo Minn Oo"
+output: word_document
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+source("script/hpv_microb.R")
+```
+
+## Comment
+
+- there are `r sum(data.raw$HPV == "NA" | is.na(data.raw$HPV))` missing observations in HPV result. do we assume them as negative or remove them from further analysis? 
+
+
+
+## Socio-demographic table 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+t1  
+```
+
+## HIV related table
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+t2
+```
+
+## Sexual behaviors and hygiene practices
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+t3
+```
+
+## HPV genotype distribution in HPV positive men stratified by HIV status
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+t4
+```
+
+```{r figs, echo=FALSE, fig.width=10,fig.height=10,fig.cap="\\label{fig:figs}HPV genotype distribution across different characteristics"}
+
+fig1
+```
+
+## Association between risk factors and HPV infection using multivariable logistic regression 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+t5
+```
+
