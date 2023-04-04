@@ -4,20 +4,22 @@ populate_table1 <- function(data, by,
 														percent = c("column", "row"),
 														add_N = TRUE,
 														add_total = TRUE,
-														add_pvalue = TRUE) {
+														add_pvalue = TRUE, ...) {
 	tbl <- data %>%
 		gtsummary::tbl_summary(
 			by = {{by}},
-			statistic = list(gtsummary::all_continuous() ~ "{median} ({p25} - {p75})",
+			statistic = list(gtsummary::all_continuous2() ~ "{median} ({p25} - {p75})",
 											 gtsummary::all_categorical() ~ "{n} ({p})"),
 			digits = list(
 				gtsummary::all_continuous() ~ 1,
 				gtsummary::all_categorical() ~ c(0, 1)
 			),
+			# type = type,
 			missing = missing[1],
 			missing_text = "Missing",
-			percent = percent[1]
-		)
+			percent = percent[1], ...
+		) %>%
+		gtsummary::modify_header(all_stat_cols() ~ "**{level}**, N = {n} ({style_percent(p)}%)")
 
 	header <- dplyr::pull(gtsummary::show_header_names(tbl), "column")
 	header <- header[grepl("stat_", header) & header != "stat_0"]
