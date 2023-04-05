@@ -1,5 +1,6 @@
 
 
+```
 theme_scale_y_log10 <- scale_y_log10(
   limits = c(0, 1e8), 
   breaks = c(1, 100, 1e4, 1e6),
@@ -26,3 +27,6 @@ theme_rotate_x_axis_label_45 <- theme(
   axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)
 )
 
+
+
+```
