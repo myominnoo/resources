@@ -8,3 +8,4 @@
 6. STA427_SM4IDE Statistical Methods in Infectious Disease Epidemiology https://github.com/mhoehle/STA427_SM4IDE
 7. PyData Global Bayesian Decision Analysis https://github.com/mhoehle/BayesianDecisionAnalysis
 8. Think Bayes 2 by Allen B. Downey http://allendowney.github.io/ThinkBayes2/
+9. Algorithms, 4th Edition https://algs4.cs.princeton.edu/home/
