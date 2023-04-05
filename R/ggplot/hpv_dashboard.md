@@ -13,7 +13,11 @@ export_plots_2_png <- function(l, path = tempdir(), nrow = NULL, ncol = NULL,
   
   file_names
 }
+```
 
+
+
+```
 # combine png files -------------------------------------------------------
 
 combine_png <- function(fig_paths, filename = "Plots_Combined%03d.png",
@@ -36,7 +40,11 @@ combine_png <- function(fig_paths, filename = "Plots_Combined%03d.png",
 
 
 
+```
 
+
+
+```
 # plot flows by hpv -------------------------------------------------------
 
 
@@ -106,7 +114,11 @@ plot_flow_hpv <- function(data, title, count = TRUE, ymax)
     ) +
     theme(legend.position = "none")
 }
+```
 
+
+
+```
 plot_flow_visit <- function(data, title, count = TRUE, ymax) 
 {
   df <- data %>% 
@@ -167,11 +179,11 @@ plot_flow_visit <- function(data, title, count = TRUE, ymax)
     ) +
     theme(legend.position = "none")
 }
+```
 
 
 
-
-
+```
 plot_flow_ct <- function(data, x, title)
 {
   data %>%
@@ -193,4 +205,4 @@ plot_flow_ct <- function(data, x, title)
     theme(legend.position = "bottom")
 }
 
- ``` 
+``` 
